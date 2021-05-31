@@ -32,7 +32,10 @@ namespace SnakeAndLadderGame
                     //ladder
                     case LADDER:
                         Console.WriteLine("Heyy! You Found Ladder");
-                        start = start + dice;
+                        if (start + dice <= 100)
+                            start = start + dice;
+                        else
+                            start = start + 0;
                         break;
 
                     //snake
