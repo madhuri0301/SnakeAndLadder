@@ -14,6 +14,7 @@ namespace SnakeAndLadderGame
             Console.WriteLine("Let's Play");
             int start = 0;
             int win = 100;
+            int count = 0;
 
             while (start < win)
             {
@@ -23,6 +24,7 @@ namespace SnakeAndLadderGame
                 Console.WriteLine("The Number Is = " + dice);
 
                 int check = random.Next(0, 3); //To Check it's Snake Or Ladder
+                count++;
                 switch (check)
                 {
                     case NO_PLAY:
@@ -50,8 +52,10 @@ namespace SnakeAndLadderGame
                         break;
                 }
                 Console.WriteLine("You Are On Position " + start);
-
+                dice = dice + 1;
             }
+            Console.WriteLine("Congratulations! You Are Won!");
+            Console.WriteLine("The Number Of Times Dice Played : " + count);
         }
     }
 }
